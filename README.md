@@ -36,6 +36,26 @@
 - Eigen >= 3.3.4 (default for Ubuntu 18.04)
 - GTSAM >= 4.0.0(tested on 4.0.0-alpha2)
 
+install GTSAM:
+```shell
+git clone https://github.com/borglab/gtsam.git
+cd gtsam/
+mkdir build
+cd build
+cmake -DGTSAM_USE_SYSTEM_EIGEN=ON ..
+sudo make -j4 install
+```
+install geographiclib:
+```shell
+git clone https://github.com/geographiclib/geographiclib.git
+cd geographiclib/
+git checkout v2.2
+mkdir build
+cd build
+cmake ..
+sudo make -j4 install
+```
+
 ## Build
 
 ```shell
